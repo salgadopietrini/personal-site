@@ -1,0 +1,130 @@
+.c-contact-title-and-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5vw;
+}
+
+.c-contact-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-contact-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-contacts {
+  display: grid;
+  height: 40px;
+  width: 750px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.c-contacts a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-contacts i {
+  margin-right: 0.25em;
+}
+
+.c-contacts-tittle {
+  height: 150px;
+  width: fit-content;
+  font-size: 65px;
+  font-family: "Zilla Slab";
+  color: white;
+}
+.c-contacts-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 20px;
+  color: white;
+}
+
+.c-contacts-items:hover,
+.c-contacts-items:hover a {
+  color: black;
+  animation-name: contacts-itemsanimation;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes contacts-itemsanimation {
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.c-contacts-fillbox {
+  width: 80%;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 6px double $secondColor;
+  padding: 15px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: roboto;
+  font-weight: bold;
+}
+
+.c-contacts-comments {
+  border: 6px double $secondColor;
+  margin-bottom: 8px;
+  background-color: transparent;
+  padding: 15px;
+  color: white;
+  font-family: roboto;
+  font-weight: bold;
+}
+.c-contacts-submit-button {
+  all: unset;
+  background-color: transparent;
+  text-align: center;
+  height: 50px;
+  width: 150px;
+  padding: 10px;
+  color: white;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.c-contacts-fillbox:focus,
+.c-contacts-comments:focus {
+  outline: none;
+}
+.c-contacts-submit-button:hover {
+  color: black;
+  animation: button 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1140px) {
+  .c-contact-title-and-items-container {
+    transform: scale(0.4);
+  }
+  .c-contact-form-container {
+    transform: scale(0.4);
+  }
+}

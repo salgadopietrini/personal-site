@@ -1,0 +1,14 @@
+$mainColor: transparent;
+$secondColor: #92dce5;
+$degradeStart: #2b303a;
+$degradeEnd: #7c7c7c;
+$navbarHeight: 8vh;
+$footerHeight: 5vh;
+
+@import "./projects";
+@import "./aboutme";
+@import "./contact";
+@import "./navbar";
+@import "./presentation";
+@import "./footer";
+@import "./pages";

@@ -1,0 +1,105 @@
+.custom-nav {
+  position: fixed;
+  height: $navbarHeight;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.buttons-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.buttons-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-button {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 130px;
+  color: $secondColor;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  border-radius: 0px;
+}
+
+.nav-button-logo {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: fit-content;
+  color: $secondColor;
+  font-family: "Tourney", cursive;
+  border-radius: 0px;
+  font-size: 50px;
+}
+@media screen and (max-width: 720px) {
+  .custom-nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .buttons-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .nav-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .nav-button:hover {
+    color: black;
+    cursor: pointer;
+    animation: button 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .nav-button-logo:hover {
+    color: black;
+    cursor: pointer;
+    animation: button 1.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.nav-button:active {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  animation: button 0.5s;
+  animation-fill-mode: forwards;
+}
+.nav-button-logo:active {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  animation: button 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: $secondColor;
+  }
+}
