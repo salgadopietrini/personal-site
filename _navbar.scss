@@ -7,7 +7,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 100%;
-  background-color: transparent;
+  background-color: #ffffff10;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1;
 }
 
